@@ -16,6 +16,7 @@ jobs:
           node-versions: 16.x
       - run: npm ci
       - run: npm test
+      
   build:
     name: Build and Deploy
     needs: test
@@ -24,6 +25,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: uses Node v16
         uses: actions/setup-node@v3
         with:
