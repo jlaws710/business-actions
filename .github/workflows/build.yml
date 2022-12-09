@@ -1,4 +1,4 @@
-  build:
+build:
     name: Build and Deploy
     needs: test
     runs-on: ubuntu-latest
@@ -7,10 +7,10 @@
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: use Node 16
+      - name: uses Node v18
         uses: actions/setup-node@v3
         with:
-        node-version: 16.x
+          node-version: 18.x
 
       - name: Install Railway
         run: npm i -g @railway/cli
